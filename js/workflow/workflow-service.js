@@ -4,7 +4,7 @@
 			$(".addInput").click(function(){
 	            var getDiv = document.getElementById( "workflow");
 	            var createDivIbox =document.createElement("div");
-	            createDivIbox.setAttribute("class","ibox float-e-margins inputSoming");
+	            createDivIbox.setAttribute("class","ibox float-e-margins inputSoming addInput");
 
 	            var createDiv =document.createElement("div");
 	            createDiv.setAttribute("class","input-group");
@@ -87,8 +87,8 @@
 		            	createTdThird.appendChild(creatButtonFirst);
 
 		            	var creatiFirst =document.createElement("i");
-		            	creatiFirst.setAttribute("class","fa fa-paste");
-		            	creatiFirst.innerHTML="修改";
+		            	creatiFirst.setAttribute("class","fa fa-pencil-square");
+		            	creatiFirst.innerHTML="&nbsp;&nbsp;修改";
 		            	creatButtonFirst.appendChild(creatiFirst);
 
 
@@ -100,7 +100,7 @@
 		            	creatiSecond.setAttribute("class","fa fa-eye");
 		            	creatiSecond.setAttribute("data-toggle","modal");
 		            	creatiSecond.setAttribute("data-target","#eyeWorkflow");
-		            	creatiSecond.innerHTML="查看";
+		            	creatiSecond.innerHTML="&nbsp;&nbsp;查看";
 		            	creatButtonSecond.appendChild(creatiSecond);
 
 
@@ -110,7 +110,7 @@
 
 		            	var creatiThird =document.createElement("i");
 		            	creatiThird.setAttribute("class","fa fa-trash");
-		            	creatiThird.innerHTML="删除";
+		            	creatiThird.innerHTML="&nbsp;&nbsp;删除";
 		            	creatButtonThird.appendChild(creatiThird);
 
 		            	createTr.appendChild(createTdThird);
@@ -173,11 +173,12 @@
 		},
 		editWorkflowALL:function(){//修改流程信息
 			$("#dataTableWorkflow").on("click",".editWorkflow",function(){
+				$("#workflow > div > div > input").val('');
+				$("#workflow > div > textarea").val('');
+				$("#workflow > .addInput").remove();
 				var parentId=$(this).parent().parent().attr("value");
 				var nodeNum;
 				var t=1;
-				$("#workflow > div > div > input").empty('');
-				$("#workflow > div > textarea").empty('');
 				for(var i=0;i<getWorkflowData.length;i++){
 					if(parentId==getWorkflowData[i].workflowId){
 						var childNum=getWorkflowData[i].node.length==0?"div":"div:nth-child("+t+")";
@@ -193,6 +194,13 @@
 					}
 				}
 			})
+		},
+		addNewWorkflow:function(){//点击新增流程
+			$(".btn-add").click(function(){
+				$("#workflow > div > div > input").val('');
+				$("#workflow > div > textarea").val('');
+				$("#workflow > .addInput").remove();
+			})
 		}
 	})
 })(jQuery)
@@ -204,5 +212,6 @@ $(document).ready(function(){
 	$.dataTableWorkflow();
 	$.showWorkflowALL();
 	$.editWorkflowALL();
+	$.addNewWorkflow();
 
 })
