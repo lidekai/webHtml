@@ -1,0 +1,32 @@
+/*
+*接受后台传来的数据
+ */
+var projectData=[
+				{
+					"projectId":"",
+					"projectName":"",
+					"description":"",
+					"descriptionState":"",
+					"createTime":"",
+					"updateTime":"",
+					"version":"",
+					"progressId":"",
+					"startTime":"",
+					"endTime":"",
+					"workflowId":"",
+					"workflowName":"",
+					"nodeDescription":"",
+					"node":[
+							{
+									"workflowId":"",
+									"workflowName":"",
+									"nodeDescription":""
+							},
+							{
+									"workflowId":"",
+									"workflowName":"",
+									"nodeDescription":""
+							}
+					]
+				}
+]

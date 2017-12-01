@@ -50,6 +50,7 @@
 	            getDiv.appendChild(createDivIbox);
 
 			});
+			$("#workflow > div > textarea").val('');
 		},
 		delectChild:function(){//删除节点
 			$("#workflow").on("click",".delectThis",function(){
@@ -124,6 +125,7 @@
 		},
 		showWorkflowALL:function(){//模态框展现所有数据
 			$("#dataTableWorkflow").on("click",".eyeWorkflow",function(){
+				$(".btn-add").click();
 				$("#eyeWorkflow > div > div > div.modal-header > h4").empty('');
 				$("#eyeWorkflow > div > div > div.modal-header > small").empty('');
 				$("#vertical-timeline").empty('');
@@ -173,9 +175,7 @@
 		},
 		editWorkflowALL:function(){//修改流程信息
 			$("#dataTableWorkflow").on("click",".editWorkflow",function(){
-				$("#workflow > div > div > input").val('');
-				$("#workflow > div > textarea").val('');
-				$("#workflow > .addInput").remove();
+				$(".btn-add").click();
 				var parentId=$(this).parent().parent().attr("value");
 				var nodeNum;
 				var t=1;
@@ -183,12 +183,14 @@
 					if(parentId==getWorkflowData[i].workflowId){
 						var childNum=getWorkflowData[i].node.length==0?"div":"div:nth-child("+t+")";
 						$("#workflow > "+childNum+" > div > input").val(getWorkflowData[i].workflowName);
+						$("#workflow > "+childNum+" > div > input").attr("text",getWorkflowData[i].workflowId)
 						$("#workflow > "+childNum+"> textarea").val(getWorkflowData[i].nodeDescription);
 						for(var j=0;j<getWorkflowData[i].node.length;j++){
 							$(".addInput").click();
 							t++;
 							var child="div:nth-child("+t+")";
 							$("#workflow > "+child+" > div > input").val(getWorkflowData[i].node[j].workflowName);
+							$("#workflow > "+child+" > div > input").attr("text",getWorkflowData[i].node[j].workflowId);
 							$("#workflow > "+child+"> textarea").val(getWorkflowData[i].node[j].nodeDescription);
 						}
 					}
@@ -198,9 +200,42 @@
 		addNewWorkflow:function(){//点击新增流程
 			$(".btn-add").click(function(){
 				$("#workflow > div > div > input").val('');
+				$("#workflow > div > div > input").attr("text","");
 				$("#workflow > div > textarea").val('');
 				$("#workflow > .addInput").remove();
 			})
+		},
+		uploadWorkflow:function(){//保存数据
+			$(".btn-upload").click(function(){
+				$("#workflow input[type='text']").each(function(){
+					var judgeYN=$(this).val();
+    				if(judgeYN==null||judgeYN==''){
+    					swal({
+			                title: "提交失败！",
+			                text: "温馨提醒：名称不能为空，请完成填写。"
+			            });
+    				}
+
+  				});
+				var num=0;
+				$(".inputSoming").each(function(){
+					if(num==0){
+						setWorkflowData.workflowId=$(this).find('input').attr("text");
+						setWorkflowData.workflowName=$(this).find('input').val();
+						setWorkflowData.nodeDescription=$(this).find('textarea').val();
+					}else{
+						var nodeWorkflowData={"workflowId":"","workflowName":"","nodeDescription":""}
+						nodeWorkflowData.workflowId=$(this).find('input').attr("text");
+						nodeWorkflowData.workflowName=$(this).find('input').val();
+						nodeWorkflowData.nodeDescription=$(this).find('textarea').val();
+						setWorkflowData.node[num]=nodeWorkflowData;
+					}
+					num++;
+				})
+			})
+		},
+		delectWorkflow:function(){//删除数据
+
 		}
 	})
 })(jQuery)
@@ -213,5 +248,7 @@ $(document).ready(function(){
 	$.showWorkflowALL();
 	$.editWorkflowALL();
 	$.addNewWorkflow();
+	$.uploadWorkflow();
+	$.delectWorkflow();
 
 })

@@ -54,3 +54,9 @@ var getWorkflowData=[
 /*
 *向后台传送的数据
  */
+var setWorkflowData={
+					"workflowId":"",
+					"workflowName":"",
+					"nodeDescription":"",
+					"node":[]
+				}
