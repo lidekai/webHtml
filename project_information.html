@@ -21,12 +21,20 @@
             <thead>
 			    <tr>
 			        <th class="text-center">项目名称</th>
-					<th class="text-center">项目进程</th><!--流程-->
-					<th class="text-center">项目状态</th><!--选进程阶段-->
-					<th class="text-center">进程状态</th><!--进程的状态-->
-					<th class="text-center">开发周期</th><!--进程的预期开发周期-->
-					<th class="text-center">项目结果</th><!--实质用时，上传附件信息-->
-					<th class="text-center">操作</th><!--查看、删除，修改-->
+					<th class="text-center">项目流程</th><!--开发的流程-->
+					<th class="text-center">项目进程</th><!--流程中的阶段-->
+					<th class="text-center">项目状态</th><!--阶段的状态：开始开发，完成，进行-->
+					<th class="text-center">项目结果</th>
+					<!--
+					开发时：倒计时/总时长 ，
+					完成时：超时多少，提前多少，刚好
+					-->
+					<th class="text-center">操作</th>
+					<!--
+						查看：附件+计时
+						删除：
+						修改：
+					-->
 			    </tr>
             </thead>
             <tbody id="dataTableWorkflow">
