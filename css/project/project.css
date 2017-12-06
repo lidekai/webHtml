@@ -1,0 +1,12 @@
+.editProject,.eyeProject{
+	margin-right: 20px;
+}
+.modal-eyeProject{
+	border-bottom:none;
+}
+.eyeProjectInput[readonly]{
+	background-color: inherit;
+}
+.input-group{
+	margin-bottom: 1%;
+}

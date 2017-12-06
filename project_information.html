@@ -6,12 +6,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>流程定义管理</title>
+    <title>项目信息管理</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
 	<link href="css/plugins/dataTables/datatables.min.css" rel="stylesheet">
+	<link href="css/project/project.css" rel="stylesheet">
 </head>
 
 <body class="white-bg">
@@ -21,27 +22,165 @@
             <thead>
 			    <tr>
 			        <th class="text-center">项目名称</th>
-					<th class="text-center">项目流程</th><!--开发的流程-->
-					<th class="text-center">项目进程</th><!--流程中的阶段-->
-					<th class="text-center">项目状态</th><!--阶段的状态：开始开发，完成，进行-->
-					<th class="text-center">项目结果</th>
-					<!--
-					开发时：倒计时/总时长 ，
-					完成时：超时多少，提前多少，刚好
-					-->
+			        <th class="text-center">流程个数</th>
+					<th class="text-center">创建时间</th>
+					<th class="text-center">项目版本</th>
+					<th class="text-center">项目状态</th>
+					<th class="text-center">开发周期</th><!--后台计算-->
+					<th class="text-center">项目结果</th><!--后台计算-->
 					<th class="text-center">操作</th>
-					<!--
-						查看：附件+计时
-						删除：
-						修改：
-					-->
 			    </tr>
             </thead>
-            <tbody id="dataTableWorkflow">
+            <tbody id="dataTableProject">
 
             </tbody>
         </table>
 	</div>
+	    <!--查看工作流模态框-->
+	    <div class="modal inmodal fade" id="eyeWorkflowInProject" tabindex="-1" role="dialog"  aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+	                    <button type="button" class="close" data-dismiss="modal">
+	                    	<span aria-hidden="true">&times;</span>
+	                    	<span class="sr-only">Close</span>
+	                    </button>
+	                    <h4 class="modal-title"></h4>
+	                    <small></small>
+                	</div>
+                    <div id="vertical-timeline" class="vertical-container dark-timeline center-orientation">
+
+
+
+                  	</div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--查看信息模态框-->
+        <div class="modal inmodal fade" id="eyeProject" tabindex="-1" role="dialog"  aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header modal-eyeProject">
+                        <button type="button" class="close" data-dismiss="modal">
+                            <span aria-hidden="true">&times;</span>
+                            <span class="sr-only">Close</span>
+                        </button>
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#tab-1">基本信息</a></li>
+                            <li class=""><a data-toggle="tab" href="#tab-2">项目描述</a></li>
+                            <li class=""><a data-toggle="tab" href="#tab-3">项目流程</a></li>
+                            <li class=""><a data-toggle="tab" href="#tab-4">项目进程</a></li>
+                            <li class=""><a data-toggle="tab" href="#tab-5">项目附件</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                        <div id="tab-1" class="tab-pane active">
+                            <div class="panel-body">
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-info group-btn fileText">
+                                            项目名称
+                                        </button>
+                                    </span>
+                                    <input type="text" class="form-control eyeProjectInput" placeholder="项目名称"readonly>
+                                </div>
+
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-info group-btn fileText">
+                                            项目状态
+                                        </button>
+                                    </span>
+                                    <input type="text" class="form-control eyeProjectInput" placeholder="项目状态"readonly>
+                                </div>
+
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-info group-btn fileText">
+                                            创建时间
+                                        </button>
+                                    </span>
+                                    <input type="text" class="form-control eyeProjectInput" placeholder="创建时间"readonly>
+                                </div>
+
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-info group-btn fileText">
+                                            项目版本
+                                        </button>
+                                    </span>
+                                    <input type="text" class="form-control eyeProjectInput" placeholder="项目版本"readonly>
+                                </div>
+
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-info group-btn fileText">
+                                            开始时间
+                                        </button>
+                                    </span>
+                                    <input type="text" class="form-control eyeProjectInput" placeholder="开始时间"readonly>
+                                </div>
+
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-info group-btn fileText">
+                                            结束时间
+                                        </button>
+                                    </span>
+                                    <input type="text" class="form-control eyeProjectInput" placeholder="结束时间"readonly>
+                                </div>
+
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-info group-btn fileText">
+                                            花费时间
+                                        </button>
+                                    </span>
+                                    <input type="text" class="form-control eyeProjectInput" placeholder="花费时间"readonly>
+                                </div>
+
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-info group-btn fileText">
+                                            项目结果
+                                        </button>
+                                    </span>
+                                    <input type="text" class="form-control eyeProjectInput" placeholder="项目结果"readonly>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div id="tab-2" class="tab-pane">
+                            <div class="panel-body">
+                                222222222
+                            </div>
+                        </div>
+                        <div id="tab-3" class="tab-pane">
+                            <div class="panel-body">
+                                3333333
+                            </div>
+                        </div>
+                        <div id="tab-4" class="tab-pane">
+                            <div class="panel-body">
+                                444444444
+                            </div>
+                        </div>
+                        <div id="tab-5" class="tab-pane">
+                            <div class="panel-body">
+                                5555555555
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-white" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 	<!-- Mainly scripts -->
 	<script src="js/jquery-3.1.1.min.js"></script>
@@ -49,6 +188,8 @@
     <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
     <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
     <script src="js/plugins/dataTables/datatables.min.js"></script>
+    <script src="js/project/project-data.js"></script>
     <script src="js/project/project-service.js"></script>
+
 </body>
 </html>

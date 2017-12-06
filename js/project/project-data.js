@@ -6,13 +6,14 @@ var projectData=[
 					"projectId":"1",
 					"projectName":"招标项目第一版",
 					"description":"0相关分析探讨数据之间是否具有统计学上的关联性。这种关系既包括两个数据之间的单一相关关系——如年龄与个人领域空间之间的关系，也包括多个数据之间的多重相关关系——如年龄、抑郁症发生率、个人领域空间之间的关系；既包括A大B就大",
-					"descriptionState":"项目发起",
+					"descriptionState":"开发中",
 					"createTime":"2017/10/09",
-					"updateTime":"2017/11/20",
 					"version":"第一版",
 					"projectStartTime":"2017/10/09",
-					"estimatedEndTime":"2017/11/09",
-					"realEndTime":"2017/11/20",
+					"estimatedEndTime":"2017/10/09",
+					"realEndTime":"2017/10/09",
+					"time":"60天（预计）",
+					"projectResults":"已经开发完成",
 
 					"workflowId":"1",//获取数据，新增项目时候id新增
 					"workflowName":"招标项目",
@@ -26,6 +27,7 @@ var projectData=[
 								"startTime":"2017/10/09",
 								"estimatedEndTime":"2017/10/16",
 								"realEndTime":"2017/10/18",
+								"progressState":"进行中",
 
 								"attached":[
 											{
@@ -46,6 +48,7 @@ var projectData=[
 								"startTime":"2017/10/09",
 								"estimatedEndTime":"2017/10/16",
 								"realEndTime":"2017/10/18",
+								"progressState":"完成",
 
 								"attached":[
 											{
@@ -72,6 +75,7 @@ var projectData=[
 								"startTime":"2017/10/09",
 								"estimatedEndTime":"2017/10/16",
 								"realEndTime":"2017/10/18",
+								"progressState":"暂停",
 
 								"attached":[
 											{
@@ -104,6 +108,7 @@ var projectData=[
 								"startTime":"2017/10/09",
 								"estimatedEndTime":"2017/10/16",
 								"realEndTime":"2017/10/18",
+								"progressState":"完成",
 
 								"attached":[
 											{
@@ -124,6 +129,7 @@ var projectData=[
 								"startTime":"2017/10/09",
 								"estimatedEndTime":"2017/10/16",
 								"realEndTime":"2017/10/18",
+								"progressState":"待执行",
 
 								"attached":[
 											{
@@ -144,6 +150,7 @@ var projectData=[
 								"startTime":"2017/10/09",
 								"estimatedEndTime":"2017/10/16",
 								"realEndTime":"2017/10/18",
+								"progressState":"完成",
 
 								"attached":[
 											{
@@ -164,6 +171,188 @@ var projectData=[
 								"startTime":"2017/10/09",
 								"estimatedEndTime":"2017/10/16",
 								"realEndTime":"2017/10/18",
+								"progressState":"暂停",
+
+								"attached":[
+											{
+												"attachedId":"10",
+												"attachedName":"项目服务感言",
+												"attachedPath":"progress/workflow10",
+												"attachedUploadTime":"2017/10/18"
+											}
+								],
+
+								"nodeDescription":"7相关分析探讨数据之间是否具有统计学上的关联性。这种关系既包括两个数据之间的单一相关关系——如年龄与个人领域空间之间的关系，也包括多个数据之间的多重相关关系——如年龄、抑郁症发生率、个人领域空间之间的关系；既包括A大B就大(小)，A小B就小(大)的直线相关关系，也可以是复杂相关关系（A=Y－B*X）；既可以是A、B变量同时增大这种正相关关系，也可以是A变量增大时B变量减小这种负相关，还包括两变量共同变化的紧密程度——即相关系数。实际上，相关关系唯一不研究的数据关系，就是数据协同变化的内在根据——即因果关系。获得相关系数有什么用呢？简而言之，有了相关系数，就可以根据回归方程，进行A变量到B变量的估算，这就是所谓的回归分析，因此，相关分析是一种完整的统计研究方法，它贯穿于提出假设，数据研究，数据分析，数据研究的始终。"
+							}
+					]
+				},
+				{
+					"projectId":"2",
+					"projectName":"招标项目第二版",
+					"description":"0相关分析探讨数据之间是否具有统计学上的关联性。这种关系既包括两个数据之间的单一相关关系——如年龄与个人领域空间之间的关系，也包括多个数据之间的多重相关关系——如年龄、抑郁症发生率、个人领域空间之间的关系；既包括A大B就大",
+					"descriptionState":"开发中",
+					"createTime":"2017/10/09",
+					"version":"第二版",
+					"time":"60天（预计）",
+					"projectResults":"已经开发完成",
+
+					"workflowId":"1",//获取数据，新增项目时候id新增
+					"workflowName":"招标项目",
+					"nodeDescription":"0相关分析探讨数据之间是否具有统计学上的关联性。这种关系既包括两个数据之间的单一相关关系——如年龄与个人领域空间之间的关系，也包括多个数据之间的多重相关关系——如年龄、抑郁症发生率、个人领域空间之间的关系；既包括A大B就大(小)，A小B就小(大)的直线相关关系，也可以是复杂相关关系（A=Y－B*X）；既可以是A、B变量同时增大这种正相关关系，也可以是A变量增大时B变量减小这种负相关，还包括两变量共同变化的紧密程度——即相关系数。实际上，相关关系唯一不研究的数据关系，就是数据协同变化的内在根据——即因果关系。获得相关系数有什么用呢？简而言之，有了相关系数，就可以根据回归方程，进行A变量到B变量的估算，这就是所谓的回归分析，因此，相关分析是一种完整的统计研究方法，它贯穿于提出假设，数据研究，数据分析，数据研究的始终。",
+					"node":[
+							{
+								"workflowId":"2",
+								"workflowName":"项目发起",
+
+								"progressId":"1",
+								"startTime":"2017/10/09",
+								"estimatedEndTime":"2017/10/16",
+								"realEndTime":"2017/10/18",
+								"progressState":"进行中",
+
+								"attached":[
+											{
+												"attachedId":"1",
+												"attachedName":"项目发起设计书",
+												"attachedPath":"progress/workflow2",
+												"attachedUploadTime":"2017/10/18"
+											}
+								],
+
+								"nodeDescription":"1相关分析探讨数据之间是否具有统计学上的关联性。这种关系既包括两个数据之间的单一相关关系——如年龄与个人领域空间之间的关系，也包括多个数据之间的多重相关关系——如年龄、抑郁症发生率、个人领域空间之间的关系；既包括A大B就大(小)，A小B就小(大)的直线相关关系，也可以是复杂相关关系（A=Y－B*X）；既可以是A、B变量同时增大这种正相关关系，也可以是A变量增大时B变量减小这种负相关，还包括两变量共同变化的紧密程度——即相关系数。实际上，相关关系唯一不研究的数据关系，就是数据协同变化的内在根据——即因果关系。获得相关系数有什么用呢？简而言之，有了相关系数，就可以根据回归方程，进行A变量到B变量的估算，这就是所谓的回归分析，因此，相关分析是一种完整的统计研究方法，它贯穿于提出假设，数据研究，数据分析，数据研究的始终。"
+							},
+							{
+								"workflowId":"3",
+								"workflowName":"项目初审",
+
+								"progressId":"1",
+								"startTime":"2017/10/09",
+								"estimatedEndTime":"2017/10/16",
+								"realEndTime":"2017/10/18",
+								"progressState":"完成",
+
+								"attached":[
+											{
+												"attachedId":"2",
+												"attachedName":"项目初审设计书",
+												"attachedPath":"progress/workflow3-1",
+												"attachedUploadTime":"2017/10/18"
+											},
+											{
+												"attachedId":"3",
+												"attachedName":"项目初审文献",
+												"attachedPath":"progress/workflow3-2",
+												"attachedUploadTime":"2017/10/18"
+											}
+								],
+
+								"nodeDescription":"2相关分析探讨数据之间是否具有统计学上的关联性。这种关系既包括两个数据之间的单一相关关系——如年龄与个人领域空间之间的关系，也包括多个数据之间的多重相关关系——如年龄、抑郁症发生率、个人领域空间之间的关系；既包括A大B就大(小)，A小B就小(大)的直线相关关系，也可以是复杂相关关系（A=Y－B*X）；既可以是A、B变量同时增大这种正相关关系，也可以是A变量增大时B变量减小这种负相关，还包括两变量共同变化的紧密程度——即相关系数。实际上，相关关系唯一不研究的数据关系，就是数据协同变化的内在根据——即因果关系。获得相关系数有什么用呢？简而言之，有了相关系数，就可以根据回归方程，进行A变量到B变量的估算，这就是所谓的回归分析，因此，相关分析是一种完整的统计研究方法，它贯穿于提出假设，数据研究，数据分析，数据研究的始终。"
+							},
+							{
+								"workflowId":"4",
+								"workflowName":"招标开始",
+
+								"progressId":"1",
+								"startTime":"2017/10/09",
+								"estimatedEndTime":"2017/10/16",
+								"realEndTime":"2017/10/18",
+								"progressState":"暂停",
+
+								"attached":[
+											{
+												"attachedId":"4",
+												"attachedName":"招标开始设计书",
+												"attachedPath":"progress/workflow3-3",
+												"attachedUploadTime":"2017/10/18"
+											},
+											{
+												"attachedId":"5",
+												"attachedName":"招标开始文献",
+												"attachedPath":"progress/workflow3-4",
+												"attachedUploadTime":"2017/10/18"
+											},
+											{
+												"attachedId":"6",
+												"attachedName":"招标开始感言",
+												"attachedPath":"progress/workflow3-5",
+												"attachedUploadTime":"2017/10/18"
+											}
+								],
+
+								"nodeDescription":"3相关分析探讨数据之间是否具有统计学上的关联性。这种关系既包括两个数据之间的单一相关关系——如年龄与个人领域空间之间的关系，也包括多个数据之间的多重相关关系——如年龄、抑郁症发生率、个人领域空间之间的关系；既包括A大B就大(小)，A小B就小(大)的直线相关关系，也可以是复杂相关关系（A=Y－B*X）；既可以是A、B变量同时增大这种正相关关系，也可以是A变量增大时B变量减小这种负相关，还包括两变量共同变化的紧密程度——即相关系数。实际上，相关关系唯一不研究的数据关系，就是数据协同变化的内在根据——即因果关系。获得相关系数有什么用呢？简而言之，有了相关系数，就可以根据回归方程，进行A变量到B变量的估算，这就是所谓的回归分析，因此，相关分析是一种完整的统计研究方法，它贯穿于提出假设，数据研究，数据分析，数据研究的始终。"
+							},
+							{
+								"workflowId":"5",
+								"workflowName":"招标结束",
+
+								"progressId":"1",
+								"startTime":"2017/10/09",
+								"estimatedEndTime":"2017/10/16",
+								"realEndTime":"2017/10/18",
+								"progressState":"完成",
+
+								"attached":[
+											{
+												"attachedId":"7",
+												"attachedName":"招标结束感言",
+												"attachedPath":"progress/workflow4",
+												"attachedUploadTime":"2017/10/18"
+											}
+								],
+
+								"nodeDescription":"4相关分析探讨数据之间是否具有统计学上的关联性。这种关系既包括两个数据之间的单一相关关系——如年龄与个人领域空间之间的关系，也包括多个数据之间的多重相关关系——如年龄、抑郁症发生率、个人领域空间之间的关系；既包括A大B就大(小)，A小B就小(大)的直线相关关系，也可以是复杂相关关系（A=Y－B*X）；既可以是A、B变量同时增大这种正相关关系，也可以是A变量增大时B变量减小这种负相关，还包括两变量共同变化的紧密程度——即相关系数。实际上，相关关系唯一不研究的数据关系，就是数据协同变化的内在根据——即因果关系。获得相关系数有什么用呢？简而言之，有了相关系数，就可以根据回归方程，进行A变量到B变量的估算，这就是所谓的回归分析，因此，相关分析是一种完整的统计研究方法，它贯穿于提出假设，数据研究，数据分析，数据研究的始终。"
+							},
+							{
+								"workflowId":"6",
+								"workflowName":"签订合同",
+
+								"progressId":"1",
+								"startTime":"2017/10/09",
+								"estimatedEndTime":"2017/10/16",
+								"realEndTime":"2017/10/18",
+								"progressState":"待执行",
+
+								"attached":[
+											{
+												"attachedId":"8",
+												"attachedName":"签订合同感言",
+												"attachedPath":"progress/workflow5",
+												"attachedUploadTime":"2017/10/18"
+											}
+								],
+
+								"nodeDescription":"5相关分析探讨数据之间是否具有统计学上的关联性。这种关系既包括两个数据之间的单一相关关系——如年龄与个人领域空间之间的关系，也包括多个数据之间的多重相关关系——如年龄、抑郁症发生率、个人领域空间之间的关系；既包括A大B就大(小)，A小B就小(大)的直线相关关系，也可以是复杂相关关系（A=Y－B*X）；既可以是A、B变量同时增大这种正相关关系，也可以是A变量增大时B变量减小这种负相关，还包括两变量共同变化的紧密程度——即相关系数。实际上，相关关系唯一不研究的数据关系，就是数据协同变化的内在根据——即因果关系。获得相关系数有什么用呢？简而言之，有了相关系数，就可以根据回归方程，进行A变量到B变量的估算，这就是所谓的回归分析，因此，相关分析是一种完整的统计研究方法，它贯穿于提出假设，数据研究，数据分析，数据研究的始终。"
+							},
+							{
+								"workflowId":"7",
+								"workflowName":"项目实施",
+
+								"progressId":"1",
+								"startTime":"2017/10/09",
+								"estimatedEndTime":"2017/10/16",
+								"realEndTime":"2017/10/18",
+								"progressState":"完成",
+
+								"attached":[
+											{
+												"attachedId":"9",
+												"attachedName":"项目实施感言",
+												"attachedPath":"progress/workflow6",
+												"attachedUploadTime":"2017/10/18"
+											}
+								],
+
+								"nodeDescription":"6相关分析探讨数据之间是否具有统计学上的关联性。这种关系既包括两个数据之间的单一相关关系——如年龄与个人领域空间之间的关系，也包括多个数据之间的多重相关关系——如年龄、抑郁症发生率、个人领域空间之间的关系；既包括A大B就大(小)，A小B就小(大)的直线相关关系，也可以是复杂相关关系（A=Y－B*X）；既可以是A、B变量同时增大这种正相关关系，也可以是A变量增大时B变量减小这种负相关，还包括两变量共同变化的紧密程度——即相关系数。实际上，相关关系唯一不研究的数据关系，就是数据协同变化的内在根据——即因果关系。获得相关系数有什么用呢？简而言之，有了相关系数，就可以根据回归方程，进行A变量到B变量的估算，这就是所谓的回归分析，因此，相关分析是一种完整的统计研究方法，它贯穿于提出假设，数据研究，数据分析，数据研究的始终。"
+							},
+							{
+								"workflowId":"9",
+								"workflowName":"项目服务",
+
+								"progressId":"1",
+								"startTime":"2017/10/09",
+								"estimatedEndTime":"2017/10/16",
+								"realEndTime":"2017/10/18",
+								"progressState":"暂停",
 
 								"attached":[
 											{

@@ -221,7 +221,7 @@
 				$(".inputSoming").each(function(){
 					if(num==0){
 						setWorkflowData.workflowId=$(this).find('input').attr("text");
-						setWorkflowData.workflowName=$(this).find('input').val();
+						setWorskflowData.workflowName=$(this).find('input').val();
 						setWorkflowData.nodeDescription=$(this).find('textarea').val();
 					}else{
 						var nodeWorkflowData={"workflowId":"","workflowName":"","nodeDescription":""}
@@ -235,7 +235,30 @@
 			})
 		},
 		delectWorkflow:function(){//删除数据
+			$("#dataTableWorkflow").on("click",".delectWorkflow",function(){
+				$(this).parent().parent().remove();
+				var l=$("#dataTableWorkflow > tr").length;
+				if(l==0){
+				var getDiv = document.getElementById( "dataTableWorkflow");
 
+		        var createTr =document.createElement("tr");
+		        createTr.setAttribute("class","odd");
+
+		        var createTd=document.createElement("td");
+		        createTd.setAttribute("class","dataTables_empty");
+		        createTd.setAttribute("valign","top");
+		        createTd.setAttribute("colspan","8");
+		        createTd.innerHTML="No data available in table";
+		        createTr.appendChild(createTd);
+
+		        getDiv.appendChild(createTr);
+
+		        $("#DataTables_Table_0_paginate").remove();
+		        $("#DataTables_Table_0_wrapper > div:nth-child(3)").remove();
+		        $("#DataTables_Table_0_info").remove();
+		        $("#DataTables_Table_0_filter").remove();
+				}
+			})
 		}
 	})
 })(jQuery)
